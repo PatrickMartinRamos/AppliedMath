@@ -55,7 +55,19 @@ public class gridGenerator : MonoBehaviour
         {
             tile.GetComponent<MeshRenderer>().material = material;
         }
-    }   
+    }
     #endregion
+
+    #region Assign Tile
+    public void AssignTileScript ()
+    {
+        GameObject[] tiles = GameObject.FindGameObjectsWithTag("Tile");
+        foreach (GameObject tile in tiles)
+        {
+            tile.AddComponent<Tile>();
+        }
+    }
+    #endregion
+
 
 }
